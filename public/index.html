@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./tailwind.output.css" />
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <section class="flex justify-center items-center h-screen w-screen bg-indigo-950">
+            <div class="w-192 bg-neutral-900 rounded-lg flex">
+                <form class="flex flex-col gap-6 justify-center bg-neutral-200 w-96 h-96 p-8 rounded-lg" id="register-form">
+                    <div class="h-14">
+                        <input
+                            type="text"
+                            id="input-name"
+                            class="p-1.5 border-b-2 border-t-0 border-l-0 border-r-0 border-neutral-800 focus:border-indigo-500 focus:outline-none bg-transparent placeholder:opacity-50 placeholder-neutral-950 w-full"
+                            placeholder="Nome completo"
+                        />
+                        <p class="text-red-400 text-xs" id="p-invalid-name"></p>
+                    </div>
+
+                    <div class="h-14">
+                        <input
+                            type="email"
+                            id="input-email"
+                            class="p-1.5 border-b-2 border-t-0 border-l-0 border-r-0 border-neutral-800 focus:border-indigo-500 focus:outline-none bg-transparent placeholder:opacity-50 placeholder-neutral-950 w-full"
+                            placeholder="E-mail"
+                        />
+                        <p class="text-red-400 text-xs" id="p-invalid-email"></p>
+                    </div>
+
+                    <div class="h-14">
+                        <input
+                            type="password"
+                            id="input-password"
+                            class="p-1.5 border-b-2 border-t-0 border-l-0 border-r-0 border-neutral-800 focus:border-indigo-500 focus:outline-none bg-transparent placeholder:opacity-50 placeholder-neutral-950 w-full"
+                            placeholder="Senha"
+                        />
+                        <p class="text-red-400 text-xs" id="p-invalid-password"></p>
+                    </div>
+
+                    <button
+                        class="bg-indigo-900 text-white w-2/5 mx-auto rounded-lg p-2 transition-transform hover:scale-105 active:scale-95"
+                        id="button-register"
+                    >
+                        Cadastrar
+                    </button>
+                </form>
+
+                <div class="flex justify-center items-center w-1/2">
+                    <img src="./assets/images/programing.svg" class="w-72" alt="" />
+                </div>
+            </div>
+            <div class="bg-modal h-screen w-screen fixed hidden justify-center items-center" id="modal-container">
+                <div class="bg-gray-200 h-40 w-52 flex flex-col p-8 rounded-lg">
+                    <p class="font-medium">Cadastro realizado!</p>
+                    <button
+                        class="bg-indigo-900 text-white w-2/5 m-auto rounded-lg p-2 transition-transform hover:scale-105 active:scale-95"
+                        id="button-modal"
+                    >
+                        Okay
+                    </button>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
